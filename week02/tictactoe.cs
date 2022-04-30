@@ -1,3 +1,16 @@
+/*
+    Author: Jaxon Hamm
+    
+    Class: CSE-210 Programming with Classes
+
+    Project: Tic-Tac-Toe
+
+    Summary: The goal of this project was to learn c# by programming
+    a simple game in the console, using the concepts we have learned
+    in python and applying them in a new language.
+*/
+
+
 using System;
 using System.Collections.Generic;
 
@@ -137,12 +150,12 @@ namespace PROJECT {
             }
             if (won) return true;
             won = true;
-            for (int i = 3; i < 5; i++) {
+            for (int i = 3; i < 6; i++) {
                 if (board[i] != check) won = false;
             }
             if (won) return true;
             won = true;
-            for (int i = 5; i < 8; i++)
+            for (int i = 5; i < 9; i++)
             {
                 if (board[i] != check) won = false;
             }
