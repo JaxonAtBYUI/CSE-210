@@ -65,7 +65,7 @@ namespace Unit02.Game
             foreach (Die die in dice)
             {
                 die.Roll();
-                score += die.points;
+                score += die._points;
             }
             totalScore += score;
         }
@@ -83,7 +83,7 @@ namespace Unit02.Game
             string values = "";
             foreach (Die die in dice)
             {
-                values += $"{die.value} ";
+                values += $"{die._value} ";
             }
 
             Console.WriteLine($"You rolled: {values}");
