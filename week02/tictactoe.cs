@@ -155,8 +155,7 @@ namespace PROJECT {
             }
             if (won) return true;
             won = true;
-            for (int i = 5; i < 9; i++)
-            {
+            for (int i = 5; i < 9; i++) {
                 if (board[i] != check) won = false;
             }
             if (won) return true;
