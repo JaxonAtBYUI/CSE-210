@@ -1,4 +1,4 @@
-﻿using System;
+﻿using unit03_jumper.game;
 
 namespace unit03_jumper
 {
@@ -6,7 +6,8 @@ namespace unit03_jumper
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Director d = new Director();
+            d.StartGame();
         }
     }
 }
