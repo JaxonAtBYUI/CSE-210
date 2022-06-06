@@ -7,9 +7,9 @@ namespace unit03_jumper.game
     /// </summary>
     class Director
     {
-        Parachute parachute = new Parachute();
-        TerminalService terminal = new TerminalService();
-        Word word = new Word();
+        private Parachute parachute = new Parachute();
+        private TerminalService terminal = new TerminalService();
+        private Word word = new Word();
         bool playing = true;
 
         /// <summary>
@@ -33,14 +33,14 @@ namespace unit03_jumper.game
         /// <summary>
         /// The input phase of gameplay.
         /// </summary>
-        char GetInputs() {
+        private char GetInputs() {
             return terminal.GetGuess();
         }
 
         /// <summary>
         /// The update phase of gameplay.
         /// </summary>
-        void DoUpdates(char guess) {
+        private void DoUpdates(char guess) {
             bool correct = word.CheckGuessed(guess);
             if (!correct) {
                 parachute.damageParachute();
@@ -56,7 +56,7 @@ namespace unit03_jumper.game
         /// <summary>
         /// The output phase of gameplay.
         /// </summary>
-        void DoOutputs() {
+        private void DoOutputs() {
             terminal.ShowGuessed(word.GetGuessedWord());
             terminal.DisplayJumper(parachute.getDurability());
         }
