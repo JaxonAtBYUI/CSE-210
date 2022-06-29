@@ -31,7 +31,7 @@ namespace Unit06.Game.Scripting
             
             Label label = (Label)cast.GetFirstActor(group);
             Text text = label.GetText();
-            text.SetValue(format);
+            text.SetValue(theValueToDisplay);
             Point position = label.GetPosition();
             videoService.DrawText(text, position);
         }
